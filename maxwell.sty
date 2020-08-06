@@ -1,0 +1,124 @@
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=0.8in]{geometry} %dimensions
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[breakable, many]{tcolorbox}
+
+%math stuff
+\usepackage{amsmath,amsthm, amssymb}
+\renewcommand\qedsymbol{$\blacksquare$}
+\usepackage{physics}
+\everymath{\displaystyle}
+%some macros
+\def\u{\upsilon}
+\def\veps{\varepsilon}
+
+%maybe for figures from inkscape
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage{color}
+\newcommand{\incfig}[1]{\def\svgscale{0.4}\input{#1.pdf_tex}}
+
+
+%fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\leftmark}
+\rhead{\thepage}
+\fancyfoot{}
+
+
+%link referencing
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=magenta,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Maxwell Distribution in gases},
+    bookmarks=true,
+    pdfpagemode=FullScreen,
+}  
+
+
+%for diagrams
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{mathdots}
+\usepackage{yhmath}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+
+
+%color definitions
+\definecolor{background}{HTML}{ffffff}
+\definecolor{solback}{HTML}{d3d3d3}
+
+%style definitions
+\tcbset{simple/.style={
+    breakable,
+    enhanced,
+    outer arc=0pt,
+    arc = 0pt,
+    boxrule=0.8pt,
+    colback=background, % Background color
+    colframe=white, % Border Color
+    coltitle=black, % Title Color
+    fonttitle=\bfseries,
+    attach title to upper,
+    after title={\\ },
+    segmentation style={dashed, gray},
+    }
+}
+\tcbset{solstyl/.style={
+    breakable,
+    enhanced,
+    outer arc=0pt,
+    arc = 0pt,
+    boxrule=0.8pt,
+    colback=solback, % Background color
+    colframe=black, % Border Color
+    coltitle=black, % Title Color
+    attach title to upper,
+    after title={\\ },
+    segmentation style={dashed, gray},
+    }
+}
+\tcbset{note/.style={
+    breakable,
+    enhanced,
+    outer arc=0pt,
+    arc = pt,
+    boxrule=0.8pt,
+    colback=background, % Background color
+    colframe=white, % Border Color
+    coltitle=black, % Title Color
+    attach title to upper,
+    after title={\\ },
+    segmentation style={dashed, gray},
+    }
+}
+
+
+%box definitions
+\newtcolorbox[auto counter]{problem}{
+    simple,
+    title={Problem \thetcbcounter}
+}
+\newtcolorbox[auto counter]{sol}{
+    solstyl,
+    title={Solution \thetcbcounter}
+}
+\newtheorem{lemma}{Lemma}
+\newtcolorbox{note}{
+    note,
+    title={Note}
+}
