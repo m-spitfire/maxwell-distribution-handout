@@ -1,22 +1,21 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage{maxwell}
 \usepackage{tcolorbox}
-\title{Maxwell's Distribution}
+\title{Maxwell's Distribution for Physics Olympiads}
 \author{Murad Bashirov}
 \date{}
 \begin{document}
 \begin{titlepage}
     \maketitle
-    \abstract{We will talk about probability theorem and go deep in the Maxwell's distribution, and give  some  problems that I
-    found about Maxwell's distribution}
+    \abstract{We will talk about the probability theorem and learn about the Maxwell's distribution, and solve some problems on it.}
     \tableofcontents
 \end{titlepage}
 \section{Introduction}
 \subsection{Information about Probability}
-Assume that we have a system formed  by really high number of particles.
-Also assume that our particles characterized by some quantity, which can only have some discrete values:
+Assume that we have a system having a really large number of particles.
+Also assume that our particles are characterized by some quantity, which can only have discrete values:
 $$\u_1,\u_2,\ldots,\u_n$$
-Let us make a very great number $N$ of measurements of the quantity $\u$, bringing the system before 
+Let us make a very large number of measurements ($N$) of the quantity $\u$, bringing the system before 
 each measurement to the same initial state. Instead of performing repeated measurements of the
 same system, we can take $N$ identical systems in the same state and measure the quantity 
 $\u$ once in all these systems. Such a set of identical systems in an identical state is called a 
@@ -448,10 +447,10 @@ So we can use this when averaging things, due to coordinates.
 \section{Problems}
 \subsection{Easy problems}
 \begin{problem}
-    Do the integrals which was provided in the Section~\ref{sec:maxwell}
+    Do the integrals provided in Section~\ref{sec:maxwell}.
 \end{problem}
 
-From now on you can use following integrals:
+From now on, you can use following integrals:
 \begin{align}
     \label{eq:int0}
     I_0=\int_0^\infty e^{-ax^2}=\frac12\sqrt{\frac{\pi}{a}}\\
@@ -467,48 +466,46 @@ From now on you can use following integrals:
     I_5=\int_0^\infty x^5e^{-ax^2}=\frac{1}{a^3}
 \end{align}
 \begin{problem}
-    Show that for any ideal gas the product of mean velocity and mean inverse velocity is:
+    Show that for any ideal gas the product of mean velocity and the mean inverse velocity is:
     $$\langle v\rangle\left<\frac{1}{v}\right> =\frac{4}{\pi}$$
 \end{problem}
 \begin{problem}
-    Get the formula for Maxwell's distribution in terms of kinetic energy $E$:
-    $$F(E)\dd E = a E^{b}\exp(-\frac{E}{kT})\dd E$$
-    i.e find the constants $a, b$
+    If the formula for Maxwell's distribution in terms of kinetic energy $E$ is given as:
+    $$F(E)\dd E = a E^{b}\exp(-\frac{E}{kT})\dd E$$ Find the constants $a$ and $b$. 
 \end{problem}
 \begin{problem}
-    We can also define the distribution in term  of deBroglie wavelength:
+    We can also define the distribution in terms  of the De-Broglie wavelength:
     $$\lambda=\frac{h}{mv}$$
-    where $h$ is Planck constant. So find the distribution $F(\lambda)\dd\lambda$ in terms of $\lambda$
+    where $h$ is Planck constant. Suppose that it is given as 
     $$F(\lambda)\dd\lambda=a\lambda^{-b}\exp(-\frac{c}{\lambda^2})\dd \lambda$$
-    i.e find constants $a,b,c$
+    then find constants $a$, $b$ and $c$.
 \end{problem}
 
 \subsection{Intermediate problems}
 \begin{problem}
     One mole of ideal gas kept in the vessel. Temperature of the gas is kept constant equal to $T$.
     Gas concentration in the vessel is $n$. Estimate the number of molecules $N_c$ colliging with the flat wall of
-    container per unit area $S$ during period of time $\Delta t$ 
-
-    \emph{Hint: first try a simplified problem then generilaze}
+    container per unit area $S$ during period of time $\Delta t$. 
+\\
+    \emph{Hint: First try a simplified problem then try to generalize your result.}
 \end{problem}
 \begin{problem}
-    Using Maxwell's distribution calculate pressure of $P$ of ideal gas with concentration $n$ and temperature $T$
+    Using Maxwell's distribution calculate pressure of $P$ of ideal gas with concentration $n$ and temperature $T$.
 \end{problem}
 
 \subsection{Harder problems}
 \begin{problem}
     An ideal monoatomic gas is leaking from thermally insulated vessel into vacuum through a tiny hole
-    ,which is much smaller than mean free path of gas.\\
-    Assuming Maxwell's velocity distribution for the atoms, calculate parameter $\gamma$. which is ratio 
+    ,which is much smaller than the mean free path of gas. Assuming Maxwell's velocity distribution for the atoms, calculate the parameter $\gamma$, which is defined as the ratio 
     between average kinetic energy of molecules of gas outside the vessel to average energy oh the gas inside the 
     vessel: $$\gamma=\frac{\langle E_{\text{outside}}\rangle}{\langle E_{\text{inside}}\rangle}$$
-    There is no flow back of atoms
+    Assume that none of the atoms flow back. 
 \end{problem}
 \begin{problem}
     A thermally insulated vessel with thin walls  has a small hole at one of its sides. This vessel was initially empty at the vacuum.
     A thin beam of molecules moving with equal velocities $v_0$  is directed at the hole of the vessel
     in a direction perpendicular to the surface of the hole.
-    (arrows show gas molecules)
+    (The arrows show gas molecules.)
     \begin{center}
         \tikzset{every picture/.style={line width=0.75pt}} 
         \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
@@ -532,7 +529,7 @@ From now on you can use following integrals:
             \draw[->] (197,92) -- (273,45);
         \end{tikzpicture}
     \end{center}
-    Determine the temperature of the gas $T$ inside the vessel after a long period of time. Molar mass of atoms is $\mu$
+    Determine the temperature of the gas $T$ inside the vessel after a long period of time. Molar mass of the gas is $\mu$.
 \end{problem}
 \subsection{Hardest Problems}
 Try these problems:
@@ -648,7 +645,6 @@ Try these problems:
     So dividing energy to number of molecules we get $$\langle E_{\text{out}}\rangle=2kT$$
     Our final result is $$\frac{\langle E_{\text{outside}}\rangle}{\langle E_{\text{inside}}\rangle}=\frac{4}{3}$$
 \end{sol}
-\begin{note}
-    For the solution of OPhO problem 7 check \href{https://artofproblemsolving.com/community/c1222116_opho_invitational_round}{this} Aops forum 
-\end{note}
+Note\\
+For the solution of OPhO problem 7 check \href{https://artofproblemsolving.com/community/c1222116_opho_invitational_round}{this} Aops forum 
 \end{document}

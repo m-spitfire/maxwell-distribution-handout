@@ -61,7 +61,7 @@
 %color definitions
 \definecolor{background}{HTML}{ffffff}
 \definecolor{solback}{HTML}{d3d3d3}
-
+\definecolor{l-blue}{HTML}{0000b3}
 %style definitions
 \tcbset{simple/.style={
     breakable,
@@ -73,20 +73,6 @@
     colframe=white, % Border Color
     coltitle=black, % Title Color
     fonttitle=\bfseries,
-    attach title to upper,
-    after title={\\ },
-    segmentation style={dashed, gray},
-    }
-}
-\tcbset{solstyl/.style={
-    breakable,
-    enhanced,
-    outer arc=0pt,
-    arc = 0pt,
-    boxrule=0.8pt,
-    colback=solback, % Background color
-    colframe=black, % Border Color
-    coltitle=black, % Title Color
     attach title to upper,
     after title={\\ },
     segmentation style={dashed, gray},
@@ -108,6 +94,22 @@
 }
 
 
+\tcbset{solstyl/.style={
+    breakable,
+    enhanced,
+    outer arc=0pt,
+    arc = 0pt,
+    boxrule=0.8pt,
+    colback=background, % Background color
+    colframe=l-blue, % Border Color
+    coltitle=black, % Title Color
+    fonttitle=\bfseries,
+    attach title to upper,
+    after title={\\ },
+    segmentation style={dashed, gray},
+    }
+}
+
 %box definitions
 \newtcolorbox[auto counter]{problem}{
     simple,
@@ -117,8 +119,8 @@
     solstyl,
     title={Solution \thetcbcounter}
 }
-\newtheorem{lemma}{Lemma}
 \newtcolorbox{note}{
     note,
     title={Note}
 }
+\newtheorem{lemma}{Lemma}
